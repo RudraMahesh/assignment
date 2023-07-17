@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hersheys</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- for carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.webp" alt="" class="w-50">
+                </a>
+
+                <p type="button" class=" position-relative p-0 m-0">
+                    <i class="fa-solid fa-cart-shopping text-white fs-5 pe-2" data-bs-toggle="offcanvas"
+                        data-bs-target="#Id2" aria-controls="Id2"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        id="totalQuantity1">
+                        0
+                    </span>
+                </p>
+            </div>
+        </nav>
+
+        <!-- off canvas -->
+
+        <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="Id2"
+            aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    <ul id="cartItems"></ul>
+                    <hr>
+                    <p class="fw-bold">Total Quantity: <span class="fw-normal" id="totalQuantity">0</span></p>
+                    <p class="fw-bold">Total Price: ₹<span class="fw-normal" id="totalPrice">0.00</span></p>
+                    <button class="btn btn-danger" id="clearCart">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <!-- hero section  start-->
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="First slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="images/caro3.jpg" class="w-100 d-block custom-hero" alt="First slide">
+                    <div class="carousel-caption">
+                        <h3 class="extrabold">Best Coco powder</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/caro1.jpg" class="w-100 d-block custom-hero" alt="Second slide">
+                    <div class="carousel-caption ">
+                        <h3 class="extrabold">Premium Quality chocolates</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/caro2.jpg" class="w-100 d-block custom-hero" alt="Third slide">
+                    <div class="carousel-caption">
+                        <h3 class="extrabold">Pure Mixing</h3>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- hero section end -->
+
+
+        <!-- products section start -->
+        <div class="container">
+            <h3 class="extrabold fs-3 pt-5">Our Products</h3>
+            <div class="row" id="first">
+                <div class="owl-carousel">
+                    <div class="me-lg-2">
+                        <div class="card">
+                            <img class="card-img-top" src="images/products/edi1.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title alternate custom-text">Hershey's Creamy Milk Chocolate
+                                    Bar, 40g
+                                    (Pack of 8)
+                                </h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <p class="card-text semibold p-0 m-0">&#8377;330</p>
+                                    <span class="btn btn-outline-secondary ms-4" style="font-size: 14px;">Pack of
+                                        8</span>
+                                </div>
+                                <button class="btn btn-dark px-4 semibold add-to-cart" data-id="1">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me-lg-2">
+                        <div class="card">
+                            <img class="card-img-top" src="images/products/edit2.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title alternate custom-text">Hershey's Special Dark Pure
+                                    Chocolate, 50 g
+                                </h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <p class="card-text semibold p-0 m-0">&#8377;400</p>
+                                    <span class="btn btn-outline-secondary ms-4" style="font-size: 14px;">Pack of
+                                        8</span>
+                                </div>
+                                <button class="btn btn-dark px-4 semibold add-to-cart" data-id="2">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me-lg-2">
+                        <div class="card">
+                            <img class="card-img-top" src="images/products/edit3.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title alternate custom-text">Hershey's Cookies n Crème
+                                    Chocolate Bar, 40
+                                    g
+                                </h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <p class="card-text semibold p-0 m-0">&#8377;480</p>
+                                    <span class="btn btn-outline-secondary ms-4" style="font-size: 14px;">Pack of
+                                        8</span>
+                                </div>
+                                <button class="btn btn-dark px-4 semibold add-to-cart" data-id="3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me-lg-2">
+                        <div class="card">
+                            <img class="card-img-top" src="images/products/edit4.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title alternate custom-text">Hershey's Kisses Moments Chocolate
+                                    Gift
+                                    Pack, 193.5 g
+                                </h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <p class="card-text semibold p-0 m-0">&#8377;450</p>
+                                    <span class="btn btn-outline-secondary ms-4" style="font-size: 14px;">Pack of
+                                        8</span>
+                                </div>
+                                <button class="btn btn-dark px-4 semibold add-to-cart" data-id="4">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me-lg-2">
+                        <div class="card">
+                            <img class="card-img-top" src="images/products/edit5.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title alternate custom-text">Hershey's Cookies n Creme
+                                    Chocolate Bar,
+                                    40g (Pack Of
+                                    8)
+                                </h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <p class="card-text semibold p-0 m-0">&#8377;384</p>
+                                    <span class="btn btn-outline-secondary ms-4" style="font-size: 14px;">Pack of
+                                        8</span>
+                                </div>
+                                <button class="btn btn-dark px-4 semibold add-to-cart" data-id="5">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me-lg-2">
+                        <div class="card">
+                            <img class="card-img-top" src="images/products/edit6.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title alternate custom-text">Hershey's Whole Almonds Covered in
+                                    Creamy
+                                    Milk
+                                    Chocolate, 60 g
+                                </h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <p class="card-text semibold p-0 m-0">&#8377;360</p>
+                                    <span class="btn btn-outline-secondary ms-4" style="font-size: 14px;">Pack of
+                                        8</span>
+                                </div>
+                                <button class="btn btn-dark px-4 semibold add-to-cart" data-id="6">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me-lg-2">
+                        <div class="card">
+                            <img class="card-img-top" src="images/products/edit7.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title alternate custom-text">Hershey's Miniature, 2 X 294 g
+                                    Chocolate
+                                </h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <p class="card-text semibold p-0 m-0">&#8377;1339</p>
+                                    <span class="btn btn-outline-secondary ms-4" style="font-size: 14px;">Pack of
+                                        8</span>
+                                </div>
+                                <button class="btn btn-dark px-4 semibold add-to-cart" data-id="7">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me-lg-2">
+                        <div class="card">
+                            <img class="card-img-top" src="images/products/edit8.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title alternate custom-text">Hershey's Cookies n Creme
+                                    Chocolate Bar,
+                                    100 g
+                                </h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <p class="card-text semibold p-0 m-0">&#8377;1200</p>
+                                    <span class="btn btn-outline-secondary ms-4" style="font-size: 14px;">Pack of
+                                        8</span>
+                                </div>
+                                <button class="btn btn-dark px-4 semibold add-to-cart" data-id="8">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me-lg-2">
+                        <div class="card">
+                            <img class="card-img-top" src="images/products/edit10.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title alternate custom-text">Hershey's Milkshake shake
+                                    chocolate flavour
+                                    180ml Pack
+                                    of 8
+                                </h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <p class="card-text semibold p-0 m-0">&#8377;1360</p>
+                                    <span class="btn btn-outline-secondary ms-4" style="font-size: 14px;">Pack of
+                                        8</span>
+                                </div>
+                                <button class="btn btn-dark px-4 semibold add-to-cart" data-id="9">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="me-lg-2">
+                        <div class="card">
+                            <img class="card-img-top" src="images/products/edit11.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title alternate custom-text">Hershey's Kisses Hazelnut 'N'
+                                    Cookies, 33.6
+                                    g
+                                </h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <p class="card-text semibold p-0 m-0">&#8377;400</p>
+                                    <span class="btn btn-outline-secondary ms-4" style="font-size: 14px;">Pack of
+                                        8</span>
+                                </div>
+                                <button class="btn btn-dark px-4 semibold add-to-cart" data-id="10">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- products section end -->
+    </main>
+    <footer>
+        <div class="container-fluid bg-dark py-5 mt-5">
+            <div class="container text-white semibold py-5 " style="font-size: 14px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>About Us</h4>
+                        <p>Assignment project that includes responsive slider and add to cart functionality</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Contact</h4>
+                        <p>Email: dev@rudrakshmaheshwari.co.in</p>
+                        <p>Phone: 8375818161</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Follow Us</h4>
+                        <p>Connect with us on social media:</p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="www.linkedin.com/in/
+rudraksh-maheshwari-76856324a
+"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <hr>
+                        <p>&copy; 2023 Your Company. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+    <!-- for carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $('#first .owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                navText: ["<div class='owl-prev'><span class='fa-solid fa-angle-left'></span></div>", "<div class='owl-next'><span class='fa-solid fa-angle-right'></span></div>"],
+                responsive: {
+                    0: {
+                        items: 2,
+                        nav: true,
+                        dots: 0
+                    },
+                    600: {
+                        items: 3,
+                        nav: false,
+                        dots: 0
+                    },
+                    1000: {
+                        items: 5,
+                        nav: true,
+                        dots: true
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        window.onload = function () {
+            fetch("product.json").then(res => res.json()).then(result => {
+                var container = document.getElementById('first');
+            }).catch(error => {
+                console.log('Error:', error);
+            });
+
+            var titleText = document.getElementsByClassName("card-title")
+            var maxLength = 25;
+
+            for (var i = 0; i < titleText.length; i++) {
+                var productText = titleText[i];
+                var cardTitle = productText.innerText;
+                var limitedText = cardTitle.slice(0, maxLength) + "...";
+                productText.innerText = limitedText;
+            }
+
+            var addToCartButtons = document.getElementsByClassName('add-to-cart');
+            var cartItems = document.getElementById('cartItems');
+            var totalQuantityElement = document.getElementById('totalQuantity');
+            var totalQuantityElement1 = document.getElementById('totalQuantity1');
+            var totalPriceElement = document.getElementById('totalPrice');
+            var clearCartButton = document.getElementById('clearCart');
+            var products = [];
+            var cart = [];
+
+            // Fetch product data from JSON file
+            fetch('product.json')
+                .then(response => response.json())
+                .then(data => {
+                    products = data;
+
+                    for (var i = 0; i < addToCartButtons.length; i++) {
+                        addToCartButtons[i].addEventListener('click', function () {
+                            var id = parseInt(this.dataset.id);
+
+                            var selectedProduct = products.find(product => product.id === id);
+
+                            if (selectedProduct) {
+                                var existingCartItem = cart.find(item => item.product.id === selectedProduct.id);
+
+                                if (existingCartItem) {
+                                    existingCartItem.quantity++;
+                                } else {
+                                    cart.push({ product: selectedProduct, quantity: 1 });
+                                }
+                                updateCart();
+                            }
+                        });
+
+
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching product data:', error);
+                });
+
+            function updateCart() {
+                cartItems.innerHTML = '';
+                totalQuantity = 0;
+                totalQuantity1 = 0;
+                totalPrice = 0;
+
+                if (cart.length === 0) {
+                    var emptyCartMessage = document.createElement('li');
+                    emptyCartMessage.textContent = 'Your cart is empty.';
+                    cartItems.appendChild(emptyCartMessage);
+                } else {
+                    cart.forEach(function (item) {
+                        var product = item.product;
+                        var quantity = item.quantity;
+
+                        var cartItem = document.createElement('li');
+                        cartItem.innerHTML = `<img src="${product.image}" alt="${product.name}" style="width:40px; height: 40px;">${product.name} - ${product.price !== undefined ? `₹${product.price.toFixed(2)}` : 'Price not available'} - Quantity: ${quantity} <br><button class="btn btn-sm btn-danger remove-item" data-id="${product.id}">Remove</button>`;
+                        cartItems.appendChild(cartItem);
+
+                        totalQuantity += quantity;
+                        if (product.price !== undefined) {
+                            totalPrice += product.price * quantity;
+                        }
+                    });
+                }
+                totalQuantityElement.textContent = totalQuantity;
+                totalQuantityElement1.textContent = totalQuantity;
+                totalPriceElement.textContent = totalPrice.toFixed(2);
+            }
+
+            cartItems.addEventListener('click', function (event) {
+                if (event.target.classList.contains('remove-item')) {
+                    var itemId = parseInt(event.target.dataset.id);
+                    cart = cart.filter(item => item.product.id !== itemId);
+                    updateCart();
+                }
+            });
+
+            // Clear the entire cart
+            clearCartButton.addEventListener('click', function () {
+                cart = [];
+                updateCart();
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>

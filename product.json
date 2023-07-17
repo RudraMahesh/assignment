@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "image": "images/products/img1.jpg",
+        "backImg": "images/products/back/img1.jpg",
+        "name": "Hershey's Creamy Milk Chocolate Bar, 40g (Pack of 8)",
+        "price": 330
+    },
+    {
+        "id": 2,
+        "image": "images/products/img2.jpg",
+        "backImg": "images/products/back/img2.jpg",
+        "name": "Hershey's Special Dark Pure Chocolate, 50 g",
+        "price": 400
+    },
+    {
+        "id": 3,
+        "image": "images/products/img3.jpg",
+        "backImg": "images/products/back/img3.jpg",
+        "name": "Hershey's Cookies n Crème Chocolate Bar, 40 g",
+        "price": 480
+    },
+    {
+        "id": 4,
+        "image": "images/products/img4.jpg",
+        "backImg": "images/products/back/img4.jpg",
+        "name": "Hershey's Kisses Moments Chocolate Gift Pack, 193.5 g",
+        "price": 450
+    },
+    {
+        "id": 5,
+        "image": "images/products/img5.jpg",
+        "backImg": "images/products/back/img5.jpg",
+        "name": "Hershey's Cookies n Creme Chocolate Bar, 40g (Pack Of 8)",
+        "price": 384
+    },
+    {
+        "id": 6,
+        "image": "images/products/img6.jpg",
+        "backImg": "images/products/back/img6.jpg",
+        "name": "Hershey's Whole Almonds Covered in Creamy Milk Chocolate, 60 g",
+        "price": 360
+    },
+    {
+        "id": 7,
+        "image": "images/products/img7.jpg",
+        "backImg": "images/products/back/img7.jpg",
+        "name": "Hershey's Miniature, 2 X 294 g Chocolate",
+        "price": 1399
+    },
+    {
+        "id": 8,
+        "image": "images/products/img8.jpg",
+        "backImg": "images/products/back/img8.jpg",
+        "name": "Hershey's Cookies n Creme Chocolate Bar, 100 g",
+        "price": 1200
+    },
+    {
+        "id": 9,
+        "image": "images/products/img9.jpg",
+        "backImg": "images/products/back/img9.jpg",
+        "name": "Hershey's Milkshake shake chocolate flavour 180ml Pack of 8",
+        "price": 1360
+    },
+    {
+        "id": 10,
+        "image": "images/products/img10.jpg",
+        "backImg": "images/products/back/img10.jpg",
+        "name": "Hershey's Kisses Hazelnut 'N' Cookies, 33.6 g",
+        "price": 400
+    }
+]
